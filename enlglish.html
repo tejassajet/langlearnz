@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning - LangLearnz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="logo">LangLearnz</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="progress.html">Progress</a>
+            </div>
+        </nav>
+
+        <main class="lesson-section">
+            <h1>English Lessons</h1>
+            <div class="lesson-categories">
+                <button class="category-btn active" onclick="showCategory('vocabulary')">Vocabulary</button>
+                <button class="category-btn" onclick="showCategory('phrases')">Phrases</button>
+                <button class="category-btn" onclick="showCategory('grammar')">Grammar</button>
+            </div>
+
+            <div id="vocabulary" class="lesson-content active">
+                <div class="vocabulary-list">
+                    <div class="vocabulary-item">
+                        <h3>Hello</h3>
+                        <p class="translation">Basic greeting</p>
+                        <p class="example">Hello, how are you?</p>
+                        <button onclick="speak('Hello, how are you?', 'en-US')" class="speak-btn">🔊 Listen</button>
+                    </div>
+                    <div class="vocabulary-item">
+                        <h3>Goodbye</h3>
+                        <p class="translation">Farewell greeting</p>
+                        <p class="example">Goodbye, see you tomorrow!</p>
+                        <button onclick="speak('Goodbye, see you tomorrow!', 'en-US')" class="speak-btn">🔊 Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="phrases" class="lesson-content">
+                <div class="phrases-list">
+                    <div class="phrase-item">
+                        <h3>How are you?</h3>
+                        <p class="translation">Asking about someone's well-being</p>
+                        <p class="example">Hi! How are you today?</p>
+                        <button onclick="speak('Hi! How are you today?', 'en-US')" class="speak-btn">🔊 Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="grammar" class="lesson-content">
+                <div class="grammar-item">
+                    <h3>Present Simple</h3>
+                    <p class="explanation">Used for habits and general truths</p>
+                    <div class="examples">
+                        <p>I work in London.</p>
+                        <button onclick="speak('I work in London.', 'en-US')" class="speak-btn">🔊 Listen</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="tts.js"></script>
+    <script src="lessons.js"></script>
+</body>
+</html>
